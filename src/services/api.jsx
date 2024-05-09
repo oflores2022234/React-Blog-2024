@@ -8,7 +8,7 @@ const apiClient = axios.create({
 
 export const getBlogs = async () => {
     try{
-        return await apiClient.post('/posting')
+        return await apiClient.get('/posting')
     }catch(e){
         return{
             error: true,

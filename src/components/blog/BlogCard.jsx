@@ -1,25 +1,24 @@
-/* eslint-disable react/prop-types */
-//import { Input } from "../Input";
-
-
-export const BlogCard = ({blogs}) => {
+export const BlogCard = ({ blogs }) => {
+    console.log('blogs en BlogCard:', blogs);
+  
     return (
-        <div>
+      <div>
+        {blogs.map((blog, index) => (
+          <div key={index}>
             <div>
-        <label>Título:</label>
-        <div>{blogs}</div>
-    </div>
-    <div>
-        <label>Categoría:</label>
-        <div>{blogs}</div>
-    </div>
-    <div>
-        <label>Texto:</label>
-        <div>{blogs}</div>
-    </div>
-    
-        </div>
-        
+              <label>Título:</label>
+              <div>{blog.titulo}</div>
+            </div>
+            <div>
+              <label>Categoría:</label>
+              <div>{blog.categoria}</div>
+            </div>
+            <div>
+              <label>Texto:</label>
+              <div>{blog.texto}</div>
+            </div>
+          </div>
+        ))}
+      </div>
     );
-}
-
+  };
