@@ -1,0 +1,29 @@
+/* Estilos para el contenedor principal */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Estilos para el componente BlogCard */
+  .blog-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .blog-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .blog-card label {
+    font-weight: bold;
+  }
+  
+  .blog-card div {
+    margin-bottom: 10px;
+  }

@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import { BlogCard } from '../../components/blog/BlogCard'
+import { Navbar } from '../../components/navbar/Navbar'
 import { getBlogs } from '../../services/'
 
 export const DashbordPage = () => {
@@ -27,6 +28,12 @@ export const DashbordPage = () => {
   }, []);
 
   return (
-    <BlogCard blogs={blogs}/>
-  )
+    <div>
+      <Navbar />
+      <br></br>
+      <br></br>
+      <br></br>
+      <BlogCard blogs={blogs} />
+    </div>
+  );
 }
