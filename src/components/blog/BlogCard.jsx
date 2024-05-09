@@ -1,9 +1,25 @@
-//const imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png'
+/* eslint-disable react/prop-types */
+//import { Input } from "../Input";
 
-/*const BlogAvatar = ({url}) => {
-    return(
-        <div className="channels-avatar-container">
-            <img src={url ? url: imageUrl} width='100%' height='100%' alt='imgagen'/>
+
+export const BlogCard = ({blogs}) => {
+    return (
+        <div>
+            <div>
+        <label>Título:</label>
+        <div>{blogs}</div>
+    </div>
+    <div>
+        <label>Categoría:</label>
+        <div>{blogs}</div>
+    </div>
+    <div>
+        <label>Texto:</label>
+        <div>{blogs}</div>
+    </div>
+    
         </div>
-    )
-}*/
+        
+    );
+}
+

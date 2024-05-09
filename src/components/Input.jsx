@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-
 export const Input = ({
     field,
     label,
@@ -11,6 +9,7 @@ export const Input = ({
     validationMessage,
     onBlurHandler,
     textarea,
+    readOnly
 }) => {
     const handleValueChange = (event) => {
         onChangeHandler(event.target.value, field)
@@ -20,13 +19,33 @@ export const Input = ({
         onBlurHandler(event.target.value, field)
     }
 
-
-  return (
-    <>
-        <div className="">
-
-        </div>
-    </>
-  )
+    return (
+        <>
+            <div className="">
+                <span>{label}</span>
+            </div>
+            {textarea ? (
+                <textarea
+                    readOnly={readOnly}
+                    type={type}
+                    value={value}
+                    onChange={handleValueChange}
+                    onBlur={handleInputBlur}
+                    rows={5}
+                    style={{maxWidth: '400px'}}
+                />
+            ) : (
+                <input
+                    readOnly={readOnly}
+                    type={type}
+                    value={value}
+                    onChange={handleValueChange}
+                    onBlur={handleInputBlur}
+                />
+            )}
+            <span className="">
+                {showErrorMessage && validationMessage}
+            </span>
+        </>
+    )
 }
-

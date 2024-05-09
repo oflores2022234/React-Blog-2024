@@ -6,12 +6,14 @@ const apiClient = axios.create({
     timeout: 2000
 })
 
-export const getAllPosts = async () => {
-    try {
-      const response = await apiClient.get('/posting/add'); // Ruta para obtener todas las publicaciones
-      return response.data; // Retorna los datos de las publicaciones
-    } catch (error) {
-      throw error; // Manejo de errores
+export const getBlogs = async () => {
+    try{
+        return await apiClient.post('/posting')
+    }catch(e){
+        return{
+            error: true,
+            e
+        }
     }
-  };
+}
 
