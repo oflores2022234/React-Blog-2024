@@ -17,3 +17,25 @@ export const getBlogs = async () => {
     }
 }
 
+export const getComentarios = async () => {
+    try{
+        return await apiClient.get('/comment')
+    }catch(e){
+        return{
+            error: true,
+            e
+        }
+    }
+}
+
+export const postComentarios = async (data) => {
+    try {
+        return await apiClient.post('/comment/add', data)
+    } catch (e) {
+        return{
+            error: true,
+            e
+        }
+    }
+}
+
