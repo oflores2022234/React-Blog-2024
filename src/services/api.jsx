@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    baseURL: 'http://localhost:8080/opinionControl/v1',
+    baseURL: 'http://192.168.31.113:8080/opinionControl/v1',
     timeout: 2000
 })
 
