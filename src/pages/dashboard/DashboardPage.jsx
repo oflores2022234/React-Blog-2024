@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
-import { BlogCard } from '../../components/blog/BlogCard'
-import { Navbar } from '../../components/navbar/Navbar'
-import { getBlogs } from '../../services/'
+import React, { useEffect, useState } from 'react';
+import { BlogCard } from '../../components/blog/BlogCard';
+import { Navbar } from '../../components/navbar/Navbar';
+import { getBlogs } from '../../services/';
 
-export const DashbordPage = () => {
-
+export const DashboardPage = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -27,13 +26,18 @@ export const DashbordPage = () => {
     fetchBlogs();
   }, []);
 
+  const handleCommentClick = (publicacionId) => {
+    // Aquí puedes hacer lo que necesites con el ID de la publicación, como redirigir a la página de comentarios
+    console.log('Publicación ID:', publicacionId);
+  };
+
   return (
     <div>
       <Navbar />
-      <br></br>
-      <br></br>
-      <br></br>
-      <BlogCard blogs={blogs} />
+      <br />
+      <br />
+      <br />
+      <BlogCard blogs={blogs} onCommentClick={handleCommentClick} />
     </div>
   );
-}
+};
