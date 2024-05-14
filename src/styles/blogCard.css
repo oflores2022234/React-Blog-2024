@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 :root {
   line-height: 1.5;
   font-weight: 400;
@@ -22,14 +22,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* Estilos específicos para las cartas de blog */
+
 .blog-card-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  max-width: 800px; /* Ancho máximo del contenedor */
-  margin: 0 auto; /* Centrar el contenedor horizontalmente */
-  padding: 20px; /* Agregar un espacio interior */
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
 }
 
 .blog-card {
@@ -37,16 +37,16 @@ code {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  position: relative; /* Agrega posición relativa para alinear la imagen */
+  position: relative; 
 }
 
 .blog-card img {
-  position: absolute; /* Ajusta la posición absoluta para la imagen */
-  top: 0; /* Alinea la imagen arriba */
-  right: 0; /* Alinea la imagen a la derecha */
-  width: 200px; /* Establece el ancho deseado para la imagen */
-  height: auto; /* Mantiene la proporción de aspecto de la imagen */
-  border-radius: 8px; /* Agrega bordes redondeados a la imagen */
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  width: 200px; 
+  height: auto; 
+  border-radius: 8px; 
 }
 
 .blog-card label {
@@ -61,16 +61,16 @@ code {
 
 /* Estilos para el botón "Ver más" */
 .blog-card button {
-  background-color: #007bff; /* Color de fondo del botón */
-  color: #ffffff; /* Color del texto del botón */
-  border: none; /* Quita el borde del botón */
-  padding: 10px 20px; /* Ajusta el relleno del botón */
-  border-radius: 5px; /* Agrega bordes redondeados al botón */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  background-color: #007bff; 
+  color: #000000; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer;
 }
 
 .blog-card button:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar sobre el botón */
+  background-color: #0056b3; 
 }
 
 /* Estilos para tema claro */

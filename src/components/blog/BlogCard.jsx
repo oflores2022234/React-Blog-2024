@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import '../../styles/blogCard.css'; // Importa el archivo CSS
+import '../../styles/blogCard.css'; // 
 
 export const BlogCard = ({ blogs }) => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -32,26 +32,26 @@ export const BlogCard = ({ blogs }) => {
   };
 
   const handleCommentSubmit = (index, name, comment) => {
-    // Maneja el envío del comentario
+   
     const newComments = [...comments];
     if (!Array.isArray(newComments[index])) {
-      newComments[index] = []; // Inicializa como una matriz vacía si no está definida como una matriz
+      newComments[index] = []; 
     }
     newComments[index] = [...newComments[index], { name, text: comment }];
     setComments(newComments);
 
-    // Cierra el formulario de comentarios
+ 
     const newShowCommentForm = [...showCommentForm];
     newShowCommentForm[index] = false;
     setShowCommentForm(newShowCommentForm);
   };
 
   return (
-    <div className="blog-card-container"> {/* Agrega un contenedor para las cartas de blog */}
+    <div className="blog-card-container"> 
       {blogs.map((blog, index) => (
-        <div key={index} className="blog-card"> {/* Agrega la clase "blog-card" */}
+        <div key={index} className="blog-card"> 
           <div>
-            <img src={blog.imagenUrl} alt="Imagen del blog" /> {/* Muestra la imagen */}
+            <img src={blog.imagenUrl} alt="Imagen del blog" /> 
           </div>
           <div>
             <label>Título:</label>
@@ -63,7 +63,7 @@ export const BlogCard = ({ blogs }) => {
           </div>
           <div>
             <label>Github:</label>
-            <div><a href={blog.gitHub}>Ver en GitHub</a></div> {/* Enlace a GitHub */}
+            <div><a href={blog.gitHub}>Ver en GitHub</a></div> 
           </div>
           {expandedIndex === index ? ( 
             <div>
@@ -81,12 +81,12 @@ export const BlogCard = ({ blogs }) => {
                   <button type="submit">Enviar comentario</button>
                 </form>
               ) : (
-                <button onClick={() => handleCommentButtonClick(index)} className="btn btn-primary">Comentar</button>
+                <button onClick={() => handleCommentButtonClick(index)} className="blog-card button">Comentar</button>
               )}
-              <button onClick={() => handleViewCommentsButtonClick(index)} className="btn btn-info">Ver comentarios</button>
+              <button onClick={() => handleViewCommentsButtonClick(index)} className="blog-card button">Ver comentarios</button>
             </div>
           ) : (
-            <button onClick={() => handleExpandClick(index)} className="btn btn-info">Ver más</button>
+            <button onClick={() => handleExpandClick(index)} className="blog-card button">Ver más</button>
           )}
         </div>
       ))}

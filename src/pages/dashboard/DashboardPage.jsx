@@ -4,7 +4,8 @@ import { BlogCard } from '../../components/blog/BlogCard'
 import { Navbar } from '../../components/navbar/Navbar'
 import { getBlogs } from '../../services/'
 
-export const DashbordPage = () => {
+
+export const DashboardPage = () => {
 
   const [blogs, setBlogs] = useState([]);
 
@@ -30,6 +31,7 @@ export const DashbordPage = () => {
   return (
     <div>
       <Navbar />
+
       <br></br>
       <br></br>
       <br></br>

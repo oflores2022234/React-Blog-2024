@@ -1,0 +1,73 @@
+/* carousel.css */
+
+/* Estilos para el carousel */
+.my-carousel {
+    /* Ajuste del margen y del espacio interno */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    /* Estilo de borde y redondez */
+    border-radius: 10px;
+    /* Fondo */
+    background-color: #f8f9fa; /* Color de fondo claro */
+  }
+  
+  /* Estilos para las captions del carousel */
+  .my-carousel .carousel-caption {
+    /* Estilo de texto */
+    color: #ffffff; /* Color de texto blanco */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para mejorar la legibilidad */
+    /* Alineación del texto */
+    text-align: center;
+    /* Espaciado */
+    padding: 20px;
+    /* Fondo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semi-transparente */
+  }
+  
+  /* Estilos para los títulos de las captions */
+  .my-carousel .carousel-caption h3 {
+    /* Tamaño y estilo del texto */
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para los textos de las captions */
+  .my-carousel .carousel-caption p {
+    /* Tamaño y estilo del texto */
+    font-size: 18px;
+  }
+  
+  /* Estilos para los botones de control del carousel */
+  .my-carousel .carousel-control-prev,
+  .my-carousel .carousel-control-next {
+    /* Ajuste de posición y tamaño */
+    width: 5%;
+  }
+  
+  /* Estilo de los íconos de control del carousel */
+  .my-carousel .carousel-control-prev-icon,
+  .my-carousel .carousel-control-next-icon {
+    /* Tamaño y estilo del ícono */
+    width: 40px;
+    height: 40px;
+    /* Color del ícono */
+    background-color: rgba(0, 0, 0, 0.5); /* Color semi-transparente */
+    /* Forma del ícono */
+    border-radius: 50%; /* Forma circular */
+    /* Alineación del ícono */
+    margin-top: -20px; /* Centra verticalmente el ícono */
+  }
+  
+  /* Cambiar el color del ícono de control cuando está activo */
+  .my-carousel .carousel-control-prev-icon:hover,
+  .my-carousel .carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Color más oscuro cuando se pasa el ratón */
+  }
+  
+  /* Estilo de los íconos de control del carousel cuando está deshabilitado */
+  .my-carousel .carousel-control-prev.disabled,
+  .my-carousel .carousel-control-next.disabled {
+    opacity: 0.5; /* Reduce la opacidad cuando está deshabilitado */
+    cursor: not-allowed; /* Cambia el cursor cuando está deshabilitado */
+  }
