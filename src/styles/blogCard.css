@@ -51,10 +51,12 @@ code {
 
 .blog-card label {
   font-weight: bold;
+  color: #7f7e7e;
 }
 
 .blog-card div {
   margin-bottom: 10px;
+  color: #7f7e7e;
 }
 
 /* Estilos para el botón "Ver más" */
